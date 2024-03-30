@@ -800,7 +800,7 @@ li {
     }
   }
 }
-@media screen and (max-width: 520px) {
+@media screen and (max-width: 640px) {
   .create {
     .create_box {
       grid-template-columns: repeat(1, 1fr);
@@ -829,6 +829,7 @@ li {
     display: grid;
     gap: 0.5rem;
     grid-template-columns: repeat(4, 1fr);
+    margin: auto;
 
     .card {
       position: relative;
@@ -839,6 +840,7 @@ li {
       z-index: 1;
       border-radius: 16px;
       overflow: hidden;
+      margin: auto;
 
       &__content {
         background: linear-gradient(
@@ -1004,6 +1006,40 @@ li {
   .top {
     .top_container {
       grid-template-columns: repeat(2, 1fr);
+
+      .card {
+        width: 19rem;
+        height: 22rem;
+        &__content {
+          .img_div {
+            width: 18rem;
+            height: 12rem;
+          }
+        }
+      }
+      .owner {
+        width: 95%;
+        position: absolute;
+        top: 165px;
+        a {
+          img {
+            width: 65px;
+            height: 65px;
+            margin: auto;
+            border-radius: 50%;
+            outline: 4px solid #ab20fd;
+            outline-offset: 1px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .top {
+    .top_container {
+      grid-template-columns: repeat(1, 1fr);
 
       .card {
         width: 19rem;

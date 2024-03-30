@@ -699,7 +699,7 @@ li {
     width: 40vw;
   }
 }
-@media screen and (max-width: 520px) {
+@media screen and (max-width: 640px) {
   .create .create_box {
     grid-template-columns: repeat(1, 1fr);
   }
@@ -722,6 +722,7 @@ li {
   display: grid;
   gap: 0.5rem;
   grid-template-columns: repeat(4, 1fr);
+  margin: auto;
 }
 .top .top_container .card {
   position: relative;
@@ -732,6 +733,7 @@ li {
   z-index: 1;
   border-radius: 16px;
   overflow: hidden;
+  margin: auto;
 }
 .top .top_container .card__content {
   background: linear-gradient(rgba(84, 83, 83, 0.473), rgba(72, 72, 72, 0.25));
@@ -869,6 +871,32 @@ li {
 @media screen and (max-width: 780px) {
   .top .top_container {
     grid-template-columns: repeat(2, 1fr);
+  }
+  .top .top_container .card {
+    width: 19rem;
+    height: 22rem;
+  }
+  .top .top_container .card__content .img_div {
+    width: 18rem;
+    height: 12rem;
+  }
+  .top .top_container .owner {
+    width: 95%;
+    position: absolute;
+    top: 165px;
+  }
+  .top .top_container .owner a img {
+    width: 65px;
+    height: 65px;
+    margin: auto;
+    border-radius: 50%;
+    outline: 4px solid #ab20fd;
+    outline-offset: 1px;
+  }
+}
+@media screen and (max-width: 640px) {
+  .top .top_container {
+    grid-template-columns: repeat(1, 1fr);
   }
   .top .top_container .card {
     width: 19rem;
