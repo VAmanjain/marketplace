@@ -24,7 +24,7 @@ const ImageInput = () => {
   };
 
   return (
-    <div className="image-input-container">
+    <div className="image-input-container  ">
       <input
         type="file"
         accept="image/*"

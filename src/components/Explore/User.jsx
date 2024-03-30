@@ -5,7 +5,7 @@ const UserExplore = () => {
 
    
   return (
-   <div className="pt-[11vh] bg user_explore ">
+   <div className="pt-[16vh] black_bg user_explore ">
 <div className="user_explore_left">
 
 </div>

@@ -4,54 +4,79 @@ import { Tooltip as ReactTooltip } from "react-tooltip";
 import "../../css/main.css";
 import { AnimatePresence, motion } from "framer-motion";
 
-function classNames(...classes) {
-  return classes.filter(Boolean).join(" ");
-}
-
 const Nav = () => {
   return (
     <nav className="flex justify-between container_box items-center w-full h-[10vh] nav_bar z-20 fixed black_bg ">
       <div>
         <Link to="/">
-          <img src="logo.png" alt="logo" className="w-[4.5rem] h-[4.5rem] bg-transparent " />
+          <img
+            src="logo.png"
+            alt="logo"
+            className="w-[4.5rem] h-[4.5rem] bg-transparent "
+          />
         </Link>
       </div>
       {/* Search  */}
       <div>
-       
-<form class="w-[18vw] ">   
-    <label for="default-search" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
-    <div class="relative">
-   
-        <input type="search" id="default-search" class="block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-[#7d12ff] focus:border-[#7d12ff] dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-[#7d12ff] dark:focus:border-[#7d12ff]" placeholder="Search Mockups, Logos..." required />
-        <button type="submit" class="text-white absolute end-2.5 bottom-2.5 bg-[#7d12ff] hover:bg-[#7d12ff] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-[#7d12ff] dark:hover:bg-[#7d12ff] dark:focus:ring-[#7d12ff]">/</button>
-    </div>
-</form>
-
+        <form class="w-[18vw] ">
+          <label
+            for="default-search"
+            class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white"
+          >
+            Search
+          </label>
+          <div class="relative">
+            <input
+              type="search"
+              id="default-search"
+              class="block w-full p-4 ps-4 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-[#7d12ff] focus:border-[#7d12ff] dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-[#7d12ff] dark:focus:border-[#7d12ff]"
+              placeholder="Search Mockups, Logos..."
+              required
+            />
+            <button
+              type="submit"
+              class="text-white absolute end-2.5 bottom-2.5 bg-[#7d12ff] hover:bg-[#7d12ff] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-[#7d12ff] dark:hover:bg-[#7d12ff] dark:focus:ring-[#7d12ff]"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={1.5}
+                stroke="currentColor"
+                className="w-4 h-4"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
+                />
+              </svg>
+            </button>
+          </div>
+        </form>
       </div>
       {/* Links  */}
       <div>
         <ul className="flex">
           <li>
             <div className="inline-flex w-full justify-center gap-x-1.5  px-3 py-2 text-[1.1rem] font-semibold  ">
-            <FlyoutLink href="#" FlyoutContent={CreateContent}>
-     Create
-      </FlyoutLink>
+              <FlyoutLink href="#" FlyoutContent={CreateContent}>
+                Create
+              </FlyoutLink>
             </div>
           </li>
-          
+
           <li>
             <div className="inline-flex w-full justify-center gap-x-1.5  px-3 py-2 text-[1.1rem] font-semibold  ">
-            <FlyoutLink href="#" FlyoutContent={ExploreContent}>
-        Explore
-      </FlyoutLink>
+              <FlyoutLink href="#" FlyoutContent={ExploreContent}>
+                Explore
+              </FlyoutLink>
             </div>
           </li>
 
           <li>
             <div className="inline-flex w-full justify-center gap-x-1.5  px-3 py-2 text-[1.1rem] font-semibold  ">
               <Link to="/about">Sell</Link>
-              
             </div>
           </li>
         </ul>
@@ -90,7 +115,7 @@ const Nav = () => {
       <div className="btn">
         <button type="button">Wallet connect</button>
       </div>
-      
+
       {/* //cart */}
       <div>
         <svg
@@ -112,9 +137,6 @@ const Nav = () => {
   );
 };
 
-
-
-
 const FlyoutLink = ({ children, href, FlyoutContent }) => {
   const [open, setOpen] = useState(false);
 
@@ -128,7 +150,6 @@ const FlyoutLink = ({ children, href, FlyoutContent }) => {
     >
       <a href={href} className="relative text-white">
         {children}
-      
       </a>
       <AnimatePresence>
         {showFlyout && (
@@ -149,64 +170,37 @@ const FlyoutLink = ({ children, href, FlyoutContent }) => {
   );
 };
 
-
 const CreateContent = () => {
   return (
-   <div className=" glass_effect p-3  w-[8rem] ">
+    <div className=" glass_effect p-3  w-[8rem] ">
       <div className=" space-y-3  text-center">
         <ul className="w-full mx-auto">
           <li className="py-3 w-full mx-auto glass_effect_hover ">
-            <Link to="/nft">
-            NFT</Link>
+            <Link to="/nft">NFT</Link>
           </li>
           <li className="py-3 w-full  glass_effect_hover">
-            <Link to="/collection">
-            Collection
-            </Link>
-          </li>
-          <li className="py-3 w-full  glass_effect_hover">
-            <Link to="/drop">
-            Drop
-            </Link>
+            <Link to="/collection">Collection</Link>
           </li>
         </ul>
       </div>
-   </div>
+    </div>
   );
 };
 const ExploreContent = () => {
   return (
-   <div className=" glass_effect p-3  w-[8rem] ">
+    <div className=" glass_effect p-3  w-[8rem] ">
       <div className=" space-y-3  text-center">
         <ul className="w-full mx-auto">
           <li className="py-3 w-full mx-auto glass_effect_hover ">
-            <Link to="/explore/nft">
-            NFT</Link>
+            <Link to="/explore/nft">NFT</Link>
           </li>
           <li className="py-3 w-full  glass_effect_hover">
-            <Link to="/explore/collection">
-            Collection
-            </Link>
-          </li>
-          <li className="py-3 w-full  glass_effect_hover">
-            <Link to="/explore/drop">
-            Drop
-            </Link>
-          </li>
-          <li className="py-3 w-full  glass_effect_hover">
-            <Link to="/explore/user">
-            User
-            </Link>
+            <Link to="/explore/collection">Collection</Link>
           </li>
         </ul>
       </div>
-   </div>
+    </div>
   );
 };
-
-
-
-
-
 
 export default Nav;
