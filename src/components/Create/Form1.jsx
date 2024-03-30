@@ -3,25 +3,7 @@ import "../../css/main.css";
 
 
 const Fixed = () => {
-  // const [formValues, setFormValues] = useState({
-  //   price: "",
-  //   fixedPrice: false,
-  //   timeAuctions: false,
-  //   openForBids: false,
-  //   title: "",
-  //   itemName: "",
-  //   description: "",
-  //   royalties: "",
-  //   size: "",
-  // });
 
-  // const handleInputChange = (e) => {
-  //   const { name, value, type, checked } = e.target;
-  //   setFormValues({
-  //     ...formValues,
-  //     [name]: type === "checkbox" ? checked : value,
-  //   });
-  // };
 
   return (
     <form>
@@ -41,7 +23,7 @@ const Fixed = () => {
                   name="price"
                   id="price"
                   autoComplete="given-name"
-                  className="block w-full rounded-md border-0 py-1.5 shadow-sm bg-[#1f05898f] placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                  className="input_field "
                 />
               </div>
             </div>

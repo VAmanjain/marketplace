@@ -15,10 +15,10 @@ const Collection = () => {
           <p>You’ll need to deploy an ERC-721 contract onto the blockchain before you can create a drop.</p>
           <div className="   drop_left_input">
 
-            <div className=" drop_left_input_box ">
+            <div className=" drop_left_input_box  ">
               <ImageInput className="  img" />
 
-              <div className=" inputs  ">
+              <div className=" inputs px-2 ">
                 <div className="w-full px-2 my-2 ">
                   <label
                     htmlFor="contract_name"
@@ -32,7 +32,7 @@ const Collection = () => {
                       name="contract_name"
                       id="contract_name"
                       autoComplete="given-name"
-                      className="input_field "
+                      className="block w-full rounded-md border-0 py-1.5 shadow-sm bg-[#1f05898f] placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 p-2 "
                       placeholder="My collection Name "
                     />
                   </div>
@@ -50,7 +50,7 @@ const Collection = () => {
                       name="token_symbol"
                       id="token_symbol"
                       autoComplete="given-name"
-                      className="input_field"
+                      className="block w-full rounded-md border-0 py-1.5 shadow-sm bg-[#1f05898f] placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 p-2"
                       placeholder="MCN"
                     />
                   </div>
@@ -257,7 +257,7 @@ const Collection = () => {
           </div>
          
         </div>
-         <div></div>
+         <div className="empty"></div>
         <div className="drop_button ">
 <button className="btn ">Continue</button>
         </div>

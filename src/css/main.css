@@ -853,7 +853,7 @@ li {
 .create_nft {
   width: 100%;
   height: auto;
-  padding-top: 10vh;
+  padding-top: 11vh;
   display: flex;
 }
 .create_nft__preview {
@@ -951,6 +951,99 @@ li {
      object-fit: cover;
 }
 
+@media screen and (max-width: 580px) {
+  .create_nft {
+    display: grid;
+  }
+  .create_nft__preview {
+    padding: 2rem;
+    width: 100%;
+    height: auto;
+  }
+  .create_nft__preview .file-input-wrapper {
+    border: 1px dashed #fbf8fd;
+    margin: auto;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    width: 100%;
+    height: 25vh;
+    border-radius: 24px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+  }
+  .create_nft__preview .file-input-wrapper .file-input-button {
+    width: 100%;
+    height: 100%;
+    padding: 10px 20px;
+    background-color: transparent; /* Adjust as needed */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .create_nft__preview .file-input-wrapper input {
+    display: grid;
+    margin: 6px;
+  }
+  .create_nft__preview .file-input-wrapper input[type=file] {
+    display: none;
+  }
+  .create_nft__form {
+    width: 100%;
+  }
+  .create_nft__form h1 {
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin: 1rem 0 1rem 0;
+  }
+  .create_nft__form .tabs__list {
+    display: grid;
+  }
+  .create_nft__form .tabs__list span {
+    font-size: 1.1rem;
+    font-weight: 500;
+  }
+  .create_nft__form .tabs__item {
+    padding: 10px;
+    cursor: pointer;
+    background-color: transparent;
+    outline: none;
+    transition: all 0.3s ease;
+    border: 2px solid #7d12ff;
+    border-radius: 12px;
+    margin: 1rem 0 1rem 0;
+    width: 14rem;
+  }
+  .create_nft__form .tabs__item:hover {
+    background-color: #7d12ff;
+  }
+  .create_nft__form .tabs__item--active {
+    background-color: #7d12ff;
+    color: #fbf8fd;
+  }
+  .create_nft__form .tabs__content {
+    padding: 20px;
+  }
+  .create_nft__form .tabs__pane {
+    display: none;
+  }
+  .create_nft__form .tabs__pane--active {
+    display: block;
+  }
+  .file-preview {
+    position: relative;
+    background-color: transparent;
+    margin-bottom: 1rem;
+    border-radius: 24px;
+    border: 2px solid #fbf8fd;
+    overflow: hidden;
+  }
+  .file-preview img {
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+}
 .create_form label {
   font-size: 1.2rem;
 }
@@ -1675,9 +1768,12 @@ li {
 .drop_right .inst .inst_box_1 .inst_lines {
   margin-bottom: 0.5rem;
 }
+.drop .empty {
+  height: 10vh;
+}
 .drop_button {
   width: 100%;
-  height: 20vh;
+  height: 10vh;
   display: flex;
   justify-content: end;
   align-items: end;
@@ -1715,12 +1811,327 @@ li {
   margin-bottom: 0.25rem;
 }
 
-.profile {
-  width: 100%;
-  height: auto;
+@media screen and (max-width: 1024px) {
+  .drop .heading {
+    font-size: 2.5rem;
+    font-weight: 500;
+    padding: 0 2rem;
+    width: 100%;
+  }
+  .drop p {
+    font-size: 1.2rem;
+    padding: 0 2rem;
+  }
+  .drop_left {
+    width: 65vw;
+  }
+  .drop_left_input {
+    display: grid;
+    padding: 2rem;
+  }
+  .drop_left_input_box .inputs div .input_div {
+    width: auto;
+  }
+  .drop_right {
+    width: 25vw;
+    position: relative;
+  }
+  .drop_right .inst {
+    width: 30vw;
+    height: auto;
+    border-radius: 0.8rem;
+    padding: 2rem;
+  }
+  .drop_right .inst .inst_box_1 {
+    margin-bottom: 1rem;
+  }
+  .drop_right .inst .inst_box_1 h1 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    padding-bottom: 0.5rem;
+  }
+  .drop_right .inst .inst_box_1 .inst_lines {
+    margin-bottom: 0.5rem;
+  }
+  .drop .empty {
+    width: auto;
+  }
+  .drop_button {
+    width: 95%;
+    height: 10vh;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+  }
 }
-.profile .cover_image {
-  width: 100%;
-  height: 30vh;
-  background-color: #fbf8fd;
+@media screen and (max-width: 918px) {
+  .drop {
+    width: 100%;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1rem;
+  }
+  .drop .heading {
+    font-size: 2.5rem;
+    font-weight: 500;
+    padding: 0 2rem;
+  }
+  .drop p {
+    font-size: 1.2rem;
+    padding: 0 2rem;
+  }
+  .drop_left {
+    width: 100%;
+  }
+  .drop_left_input {
+    display: grid;
+    padding: 2rem;
+  }
+  .drop_left_input_box {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .drop_left_input_box .img {
+    width: 30%;
+  }
+  .drop_left_input_box .inputs {
+    width: 70%;
+  }
+  .drop_left_input_box .inputs div label {
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+  .drop_left .blockchain {
+    padding: 2rem 0;
+  }
+  .drop_left .blockchain h1 {
+    margin-bottom: 1rem;
+  }
+  .drop_left .blockchain_container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .drop_left .blockchain_container_box {
+    border: 1px solid rgba(251, 248, 253, 0.4784313725);
+    padding: 1rem;
+    width: 12rem;
+    height: 15rem;
+    cursor: pointer;
+    transition: 0.2s all ease-in-out;
+  }
+  .drop_left .blockchain_container_box:hover {
+    border: 1px solid #fbf8fd;
+  }
+  .drop_left .blockchain_container_box_details .name {
+    margin: 0.5rem 0;
+    padding: 0.5rem 0;
+  }
+  .drop_left .blockchain_container_box_details .name h2 {
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin: 1rem 0;
+  }
+  .drop_left .blockchain_container_box_details .tag {
+    font-size: 1rem;
+    padding: 6px;
+    border-radius: 4px;
+    font-weight: 700;
+  }
+  .drop_left .blockchain_container_box_details .cost {
+    font-size: 0.9rem;
+  }
+  .drop .empty {
+    display: none;
+  }
+  .drop_right {
+    display: none;
+  }
+  .drop_button {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 680px) {
+  .drop {
+    width: 100%;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1rem;
+  }
+  .drop .heading {
+    font-size: 2.5rem;
+    font-weight: 500;
+    padding: 0 2rem;
+  }
+  .drop p {
+    font-size: 1.2rem;
+    padding: 0 2rem;
+  }
+  .drop_left {
+    width: 100%;
+  }
+  .drop_left_input {
+    display: grid;
+    padding: 2rem;
+  }
+  .drop_left_input_box {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .drop_left_input_box .img {
+    width: 30%;
+  }
+  .drop_left_input_box .inputs {
+    width: 70%;
+  }
+  .drop_left_input_box .inputs div label {
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+  .drop_left .blockchain {
+    padding: 2rem 0;
+  }
+  .drop_left .blockchain h1 {
+    margin-bottom: 1rem;
+  }
+  .drop_left .blockchain_container {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 1rem;
+    gap: 1rem;
+  }
+  .drop_left .blockchain_container_box {
+    border: 1px solid rgba(251, 248, 253, 0.4784313725);
+    padding: 1rem;
+    width: 12rem;
+    height: 15rem;
+    cursor: pointer;
+    transition: 0.2s all ease-in-out;
+  }
+  .drop_left .blockchain_container_box:hover {
+    border: 1px solid #fbf8fd;
+  }
+  .drop_left .blockchain_container_box_details .name {
+    margin: 0.5rem 0;
+    padding: 0.5rem 0;
+  }
+  .drop_left .blockchain_container_box_details .name h2 {
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin: 1rem 0;
+  }
+  .drop_left .blockchain_container_box_details .tag {
+    font-size: 1rem;
+    padding: 6px;
+    border-radius: 4px;
+    font-weight: 700;
+  }
+  .drop_left .blockchain_container_box_details .cost {
+    font-size: 0.9rem;
+  }
+  .drop_right {
+    display: none;
+  }
+  .drop_button {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 680px) and (max-width: 425px) {
+  .drop {
+    width: 100%;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .drop .heading {
+    font-size: 1.8rem;
+    font-weight: 500;
+    padding: 0;
+  }
+  .drop p {
+    font-size: 1rem;
+    padding: 2rem 0;
+  }
+  .drop_left {
+    width: 100%;
+  }
+  .drop_left_input {
+    display: grid;
+  }
+  .drop_left_input_box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .drop_left_input_box .img {
+    width: 100%;
+  }
+  .drop_left_input_box .inputs {
+    width: 100%;
+  }
+  .drop_left_input_box .inputs div label {
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+  .drop_left_input_box .inputs div .input_div {
+    width: inherit;
+  }
+  .drop_left .blockchain {
+    padding: 2rem 0;
+  }
+  .drop_left .blockchain h1 {
+    margin-bottom: 1rem;
+  }
+  .drop_left .blockchain_container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .drop_left .blockchain_container_box {
+    border: 1px solid rgba(251, 248, 253, 0.4784313725);
+    padding: 1rem;
+    width: 12rem;
+    height: 15rem;
+    cursor: pointer;
+    transition: 0.2s all ease-in-out;
+  }
+  .drop_left .blockchain_container_box:hover {
+    border: 1px solid #fbf8fd;
+  }
+  .drop_left .blockchain_container_box_details .name {
+    margin: 0.5rem 0;
+    padding: 0.5rem 0;
+  }
+  .drop_left .blockchain_container_box_details .name h2 {
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin: 1rem 0;
+  }
+  .drop_left .blockchain_container_box_details .tag {
+    font-size: 1rem;
+    padding: 6px;
+    border-radius: 4px;
+    font-weight: 700;
+  }
+  .drop_left .blockchain_container_box_details .cost {
+    font-size: 0.9rem;
+  }
+  .drop_right {
+    display: none;
+  }
+}
+.filter_container {
+  display: grid;
 }/*# sourceMappingURL=main.css.map */

@@ -14,7 +14,7 @@ const NftExplore = () => {
      <div className='filter '>
 
      
-<div className='filter_container'>
+<div className='filter_container  '>
 <div className="wrapper">
       <Ariakit.SelectProvider defaultValue="Apple">
         <Ariakit.SelectLabel className="label">

@@ -34,7 +34,7 @@ const ImageInput = () => {
       />
       <div className="image-preview image-upload-preview" onClick={handlePreviewClick}>
         <img src={imagePreview} alt="Preview" />
-        <div className={`preview-text ${imageUploaded ? 'hidden' : ''}`}>Your Text Here</div>
+        <div className={`preview-text ${imageUploaded ? 'hidden' : ''}`}>Upload NFT</div>
       </div>
     </div>
   );

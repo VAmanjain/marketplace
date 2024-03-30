@@ -8,7 +8,6 @@
   outline: none;
 }
 
-
 a {
   list-style: none;
   text-decoration: none;
@@ -18,7 +17,7 @@ li {
   list-style: none;
 }
 
-.input_field{
+.input_field {
   width: 100%;
   background: rgba(255, 255, 255, 0.05);
   box-shadow: 0 0 10px rgba(1, 0, 0, 0.5);
@@ -1004,7 +1003,7 @@ li {
 .create_nft {
   width: 100%;
   height: auto;
-  padding-top: 10vh;
+  padding-top: 11vh;
   display: flex;
 
   &__preview {
@@ -1112,6 +1111,114 @@ li {
   overflow: hidden;
   img {
     object-fit: cover;
+  }
+}
+
+@media screen and (max-width:"580px") {
+  .create_nft {
+   display: grid;
+    &__preview {
+      padding: 2rem;
+      width: 100%;
+      height: auto;
+  
+      .file-input-wrapper {
+        border: 1px dashed #fbf8fd;
+        margin: auto;
+        padding: 1rem;
+        margin-bottom: 1rem;
+        width: 100%;
+        height: 25vh;
+        border-radius: 24px;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+  
+        .file-input-button {
+          width: 100%;
+          height: 100%;
+          padding: 10px 20px;
+          background-color: transparent; /* Adjust as needed */
+          color: white;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+        }
+  
+        input {
+          display: grid;
+          margin: 6px;
+        }
+  
+        input[type="file"] {
+          display: none;
+        }
+      }
+    }
+  
+    &__form {
+      width: 100%;
+      h1 {
+        font-weight: 700;
+        font-size: 1.5rem;
+        margin: 1rem 0 1rem 0;
+      }
+      .tabs {
+        &__list {
+          display: grid;
+       
+          span {
+            font-size: 1.1rem;
+            font-weight: 500;
+          }
+        }
+  
+        &__item {
+          padding: 10px;
+          cursor: pointer;
+          background-color: transparent;
+          outline: none;
+          transition: all 0.3s ease;
+          border: 2px solid #7d12ff;
+          border-radius: 12px;
+          margin: 1rem 0 1rem 0;
+          width: 14rem;
+  
+          &:hover {
+            background-color: #7d12ff;
+          }
+  
+          &--active {
+            background-color: #7d12ff;
+            color: #fbf8fd;
+          }
+        }
+  
+        &__content {
+          padding: 20px;
+        }
+  
+        &__pane {
+          display: none;
+  
+          &--active {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+  
+  .file-preview {
+    position: relative;
+    background-color: transparent;
+    margin-bottom: 1rem;
+    border-radius: 24px;
+    border: 2px solid #fbf8fd;
+    overflow: hidden;
+    img {
+      object-fit: cover;
+    }
   }
 }
 
@@ -1828,32 +1935,32 @@ li {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
-  .heading{
+  .heading {
     font-size: 2.5rem;
     font-weight: 500;
     padding: 0 2rem;
   }
 
-  p{
+  p {
     font-size: 1.2rem;
     padding: 0 2rem;
   }
   &_left {
     width: 55vw;
-    &_input{
+    &_input {
       display: grid;
       padding: 2rem;
-      &_box{
+      &_box {
         display: flex;
         justify-content: space-evenly;
         align-items: center;
-        .img{
+        .img {
           width: 30%;
         }
-        .inputs{
+        .inputs {
           width: 70%;
-          div{
-            label{
+          div {
+            label {
               font-size: 1.2rem;
               font-weight: 500;
             }
@@ -1912,78 +2019,442 @@ li {
   &_right {
     width: 30vw;
     position: relative;
-    
-    .inst{
+
+    .inst {
       width: 20vw;
       height: auto;
       border-radius: 0.8rem;
       padding: 2rem;
-      .inst_box{
-        &_1{
+      .inst_box {
+        &_1 {
           margin-bottom: 1rem;
-          h1{
-            font-size: 1.1rem ;
+          h1 {
+            font-size: 1.1rem;
             font-weight: 700;
             padding-bottom: 0.5rem;
           }
-          .inst_lines{
+          .inst_lines {
             margin-bottom: 0.5rem;
           }
         }
-        
       }
-     
     }
-
   }
- 
-    &_button{
-     width: 100%;
-     height: 20vh;
-     display: flex;
-     justify-content: end;
-     align-items: end;
-     padding: 1rem;
-    }
+.empty{
+  height: 10vh;
+}
+  &_button {
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    padding: 1rem;
+  }
 }
 
-.n-container{
+.n-container {
   display: flex;
 }
 
-.n-one{
+.n-one {
   display: flex;
   -webkit-box-align: start;
-    align-items: start;
+  align-items: start;
 }
-.n-one-icon{
+.n-one-icon {
   font-size: 24px;
-    font-style: normal;
-    line-height: 1;
-    letter-spacing: normal;
-    text-transform: none;
-    display: inline-block;
-    white-space: nowrap;
-    word-wrap: normal;
-    direction: ltr;
+  font-style: normal;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
 }
-.n-two{
+.n-two {
   margin-left: 16px;
-  p{
+  p {
     line-height: 20px;
     font-size: 14px;
     margin: 0;
-    margin-bottom: .25rem;
+    margin-bottom: 0.25rem;
   }
 }
 
+@media screen and (max-width: "1024px") {
+  .drop {
+    .heading {
+      font-size: 2.5rem;
+      font-weight: 500;
+      padding: 0 2rem;
+      width: 100% ;
+    }
 
-.profile{
-width: 100%;
-height: auto;
-  .cover_image{
+    p {
+      font-size: 1.2rem;
+      padding: 0 2rem;
+    }
+    &_left {
+      width: 65vw;
+      &_input {
+        display: grid;
+        padding: 2rem;
+        &_box {
+          .inputs {
+            div {
+              .input_div {
+                width: auto;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &_right {
+      width: 25vw;
+      position: relative;
+
+      .inst {
+        width: 30vw;
+        height: auto;
+        border-radius: 0.8rem;
+        padding: 2rem;
+        .inst_box {
+          &_1 {
+            margin-bottom: 1rem;
+            h1 {
+              font-size: 1.1rem;
+              font-weight: 700;
+              padding-bottom: 0.5rem;
+            }
+            .inst_lines {
+              margin-bottom: 0.5rem;
+            }
+          }
+        }
+      }
+    }
+.empty{
+  width: auto;
+}
+    &_button {
+      width: 95%;
+      height: 10vh;
+      display: flex;
+      justify-content: end;
+      align-items: end;
+      
+    }
+  }
+}
+
+@media screen and (max-width: "918px") {
+  .drop {
     width: 100%;
-    height: 30vh;
-    background-color: #fbf8fd;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1rem;
+    .heading {
+      font-size: 2.5rem;
+      font-weight: 500;
+      padding: 0 2rem;
+    }
+  
+    p {
+      font-size: 1.2rem;
+      padding: 0 2rem;
+    }
+    &_left {
+      width: 100%;
+      &_input {
+        display: grid;
+        padding: 2rem;
+        &_box {
+          display: flex;
+          justify-content: space-evenly;
+          align-items: center;
+          .img {
+            width: 30%;
+          }
+          .inputs {
+            width: 70%;
+            div {
+              label {
+                font-size: 1.2rem;
+                font-weight: 500;
+              }
+            }
+          }
+        }
+      }
+      .blockchain {
+        padding: 2rem 0;
+        h1 {
+          margin-bottom: 1rem;
+        }
+        &_container {
+          width: 100%;
+          height: auto;
+          display: flex;
+          justify-content: space-evenly;
+          align-items: center;
+  
+          &_box {
+            border: 1px solid #fbf8fd7a;
+            padding: 1rem;
+            width: 12rem;
+            height: 15rem;
+            cursor: pointer;
+            transition: 0.2s all ease-in-out;
+            &:hover {
+              border: 1px solid #fbf8fd;
+            }
+  
+            &_details {
+              .name {
+                margin: 0.5rem 0;
+                padding: 0.5rem 0;
+                h2 {
+                  font-size: 1.1rem;
+                  font-weight: 500;
+                  margin: 1rem 0;
+                }
+              }
+              .tag {
+                font-size: 1rem;
+                padding: 6px;
+                border-radius: 4px;
+                font-weight: 700;
+              }
+              .cost {
+                font-size: 0.9rem;
+              }
+            }
+          }
+        
+      }
+    }
+
+ 
+  }
+  .empty{
+    display: none;
+  }
+  &_right {
+      display: none;
+      }
+      &_button{
+        width: 100%;
+      }
+}
+}
+@media screen and (max-width: "680px") {
+  .drop {
+    width: 100%;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1rem;
+    .heading {
+      font-size: 2.5rem;
+      font-weight: 500;
+      padding: 0 2rem;
+    }
+  
+    p {
+      font-size: 1.2rem;
+      padding: 0 2rem;
+    }
+    &_left {
+      width: 100%;
+      &_input {
+        display: grid;
+        padding: 2rem;
+        &_box {
+          display: flex;
+          justify-content: space-evenly;
+          align-items: center;
+          .img {
+            width: 30%;
+          }
+          .inputs {
+            width: 70%;
+            div {
+              label {
+                font-size: 1.2rem;
+                font-weight: 500;
+              }
+            }
+          }
+        }
+      }
+      .blockchain {
+        padding: 2rem 0;
+        h1 {
+          margin-bottom: 1rem;
+        }
+        &_container {
+          width: 100%;
+          height: auto;
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          padding: 1rem;
+          gap: 1rem;
+  
+          &_box {
+            border: 1px solid #fbf8fd7a;
+            padding: 1rem;
+            width: 12rem;
+            height: 15rem;
+            cursor: pointer;
+            transition: 0.2s all ease-in-out;
+            &:hover {
+              border: 1px solid #fbf8fd;
+            }
+  
+            &_details {
+              .name {
+                margin: 0.5rem 0;
+                padding: 0.5rem 0;
+                h2 {
+                  font-size: 1.1rem;
+                  font-weight: 500;
+                  margin: 1rem 0;
+                }
+              }
+              .tag {
+                font-size: 1rem;
+                padding: 6px;
+                border-radius: 4px;
+                font-weight: 700;
+              }
+              .cost {
+                font-size: 0.9rem;
+              }
+            }
+          }
+        }
+      }
+    }
+    &_right{
+      display: none;
+    }
+ &_button{
+  width: 100%;
+ }
+}
+
+@media screen and (max-width: "425px") {
+  .drop {
+    width: 100%;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    
+    .heading {
+      font-size: 1.8rem;
+      font-weight: 500;
+      padding: 0;
+    }
+  
+    p {
+      font-size: 1rem;
+      padding:  2rem 0;
+    }
+    &_left {
+      width: 100%;
+      
+      &_input {
+        display: grid;
+        
+        &_box {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-evenly;
+          align-items: center;
+          .img {
+            width: 100%;
+          }
+          .inputs {
+            width: 100%;
+            div {
+
+              label {
+                font-size: 1.2rem;
+                font-weight: 500;
+              }
+              .input_div{
+                width: inherit;
+              }
+            }
+          }
+        }
+      }
+      .blockchain {
+        padding: 2rem 0;
+        h1 {
+          margin-bottom: 1rem;
+        }
+        &_container {
+          width: 100%;
+          height: auto;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-evenly;
+          align-items: center;
+  
+          &_box {
+            border: 1px solid #fbf8fd7a;
+            padding: 1rem;
+            width: 12rem;
+            height: 15rem;
+            cursor: pointer;
+            transition: 0.2s all ease-in-out;
+            &:hover {
+              border: 1px solid #fbf8fd;
+            }
+  
+            &_details {
+              .name {
+                margin: 0.5rem 0;
+                padding: 0.5rem 0;
+                h2 {
+                  font-size: 1.1rem;
+                  font-weight: 500;
+                  margin: 1rem 0;
+                }
+              }
+              .tag {
+                font-size: 1rem;
+                padding: 6px;
+                border-radius: 4px;
+                font-weight: 700;
+              }
+              .cost {
+                font-size: 0.9rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  
+    &_right {
+      display: none;
+      }
+    }
+
+      
+}
+}
+
+
+.filter{
+  &_container{
+display: grid;
   }
 }
