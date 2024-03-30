@@ -92,6 +92,76 @@ li {
   background-color: rgba(107, 114, 128, 0.947) !important;
 }
 
+// --------------------------------NAV-------------------------------------------------
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+.nav-outer{
+  display: flex;
+  padding: 0 2rem ;
+  // background-color: transparent !important;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+  gap: 2rem;
+  min-height: 12px;
+}
+.nav-search-w{
+  width: max-content;
+}
+
+.nav-img-container > img {
+  width: 4.5rem;
+}
+
+.nav-search-input{
+  padding: 0 !important;
+
+}
+
+.ver-mid{
+  align-self: center;
+}
+.nav-btnn{
+  align-self: center;
+}
+
+
+@media (max-width:936px){
+  .nav-search-w{
+    width: 65%;
+  }
+}
+@media (max-width:845px){
+  .nav-search-w{
+    width: 45%;
+  }
+}
+@media (max-width:845px){
+  .nav-outer{
+    font-size: .5rem;
+  }
+}
+@media (max-width:720px){
+  .btnn{
+    font-size: .5rem;
+  }
+  .nav-search-input > button{
+    font-size: .75rem;
+  }
+}
+@media (max-width:376px){
+  .btnn{
+    font-size: .3rem;
+  }
+  .nav-btnn{
+    font-size: .25rem !important;
+  }
+}
 // --------------------------------HERO-------------------------------------------------
 
 .hero {

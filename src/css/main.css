@@ -92,6 +92,74 @@ li {
   background-color: rgba(107, 114, 128, 0.947) !important;
 }
 
+.dropdown:hover .dropdown-menu {
+  display: block;
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+.nav-outer {
+  display: flex;
+  padding: 0 2rem;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+  gap: 2rem;
+  min-height: 12px;
+}
+
+.nav-search-w {
+  width: -moz-max-content;
+  width: max-content;
+}
+
+.nav-img-container > img {
+  width: 4.5rem;
+}
+
+.nav-search-input {
+  padding: 0 !important;
+}
+
+.ver-mid {
+  align-self: center;
+}
+
+.nav-btnn {
+  align-self: center;
+}
+
+@media (max-width: 936px) {
+  .nav-search-w {
+    width: 65%;
+  }
+}
+@media (max-width: 845px) {
+  .nav-search-w {
+    width: 45%;
+  }
+}
+@media (max-width: 845px) {
+  .nav-outer {
+    font-size: 0.5rem;
+  }
+}
+@media (max-width: 720px) {
+  .btnn {
+    font-size: 0.5rem;
+  }
+  .nav-search-input > button {
+    font-size: 0.75rem;
+  }
+}
+@media (max-width: 376px) {
+  .btnn {
+    font-size: 0.3rem;
+  }
+  .nav-btnn {
+    font-size: 0.25rem !important;
+  }
+}
 .hero {
   width: 100%;
   height: auto;
