@@ -220,6 +220,11 @@ li {
       transition: all 0.2s;
       position: relative;
       cursor: pointer;
+      background: rgba(255, 255, 255, 0.05);
+      box-shadow: 0 0 10px rgba(1, 0, 0, 0.5);
+      backdrop-filter: blur(10px);
+      border-radius: 18px;
+      color: #fbf8fd;
 
       &:hover {
         transform: scale(1.04) rotate(1deg);

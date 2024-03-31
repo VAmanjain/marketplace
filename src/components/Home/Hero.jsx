@@ -32,7 +32,7 @@ const Hero = () => {
         <button className="btn mb-[2rem] ">Explore</button>
       </div>
       <div className="hero_right">
-        <div class="card">
+        <div class="card ">
           <div class="circle"></div>
           <div class="circle"></div>
           <div class="card-inner z-20">
